@@ -9,7 +9,7 @@ import sqlite3
 conn = sqlite3.connect('tech_lotus.db')
 print "Connected and opened VTECHZ database";
 
-
+# lol if not exists
 conn.execute('''CREATE TABLE IF NOT EXISTS VTECHZ
 	(ID INT PRIMARY KEY		NOT NULL,
 	NAME		TEXT	NOT NULL,
@@ -29,8 +29,18 @@ print "Table created";
 f = open('test input for issue 1.txt','r')
 for line in f:
 	# gonna be a lot of if statements here
+	# requisition_date will be the first input that we need, so we can start
+	# the table there, and then add stuff until the next requisition_date
 	if 'requisition_date' in line:
 		print line
+	elif 'need_date:' in line:
+	elif 'problem:' in line:
+	elif 'CompletedBy:' in line:
+	elif 'status:' in line:
+	elif 'phone:' in line:
+	elif '$Revisions:' in line:
+	elif 'date_created:' in line:
+	elif 'date_edited:' in line:
 			
 		
 
