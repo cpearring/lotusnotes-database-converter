@@ -1,0 +1,32 @@
+
+requisition_date:  07/20/2015
+need_date:  07/27/2015
+roomNum:  
+telEx:  
+Model:  Hardware
+serial:  
+model2:  
+problem:  Can't hook up DVD player to tv. Also, I can't pull up my class lists from esis when I'm in Chrome. 
+Disposition:  [Technology 1]
+CompletedBy:  test2
+status_button:  Completed
+status_date1:  
+status_date:  07/29/2015 12:21:54 PM
+time_on_job:  
+comment:  
+created:  CN=test3/OU=HILOH/O=HIDOE
+$$Return:  [http://n.h.k12.hi.us/SCHOOLS/D5/H/SR355.NSF/0a25659d006493af0a25643c0052573f?OpenView]
+Techz:  4-Techs
+phone:  test/HILOH/HIDOE
+Techz3:  
+from:  test
+status:  Completed
+date_created:  07/20/2015 10:33:27 AM
+edited:  test2/HILOH/HIDOE
+date_edited:  07/29/2015 12:21:54 PM
+service:  Technology
+last_edit:  test2
+$UpdatedBy:  CN=test3/OU=HILOH/O=HIDOE,CN=test2/OU=HILOH/O=HIDOE
+$Revisions:  07/20/2015 10:34:17 AM,07/29/2015 12:21:54 PM
+
+steps:  troubleshoot
