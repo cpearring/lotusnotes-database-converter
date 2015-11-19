@@ -24,7 +24,7 @@ conn.execute('''CREATE TABLE IF NOT EXISTS VTECHZ
 	REVISIONS	INT		NOT NULL,
 	CREATEDATE	TEXT	NOT NULL,
 	EDITDATE	TEXT	NOT NULL);''')
-print "Table created";
+print "Table created and/or already created";
 
 # open file, want requisition date, need date, problem, completed by
 # status, phone #, revisions, date created, and date edited
@@ -33,16 +33,26 @@ for line in f:
 	# gonna be a lot of if statements here
 	# requisition_date will be the first input that we need, so we can start
 	# the table there, and then add stuff until the next requisition_date
-	if 'requisition_date' in line:
-		print line
+	
+	# cannot use ors in the if statement block as it'll output everything
+	if 'requisition_date:' in line:
+		print line.partition(':')[2]
 	elif 'need_date:' in line:
+		print line.rpartition(':')[2]
 	elif 'problem:' in line:
+		print line.rpartition(':')[2]
 	elif 'CompletedBy:' in line:
+		print line.rpartition(':')[2]
 	elif 'status:' in line:
+		print line.rpartition(':')[2]
 	elif 'phone:' in line:
+		print line.rpartition(':')[2]
 	elif '$Revisions:' in line:
+		print line.partition(':')[2]
 	elif 'date_created:' in line:
+		print line.partition(':')[2]
 	elif 'date_edited:' in line:
+		print line.partition(':')[2]
 			
 		
 
