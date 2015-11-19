@@ -2,6 +2,8 @@
 # Casey Pearring
 # CS 294
 
+# lol test the pushing notifcation for slack
+
 import sqlite3
 
 # if database isn't available, it'll make the database
