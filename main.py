@@ -26,6 +26,8 @@ conn.execute('''CREATE TABLE IF NOT EXISTS VTECHZ
 	EDITDATE	TEXT	NOT NULL);''')
 print "Table created and/or already created";
 
+i = 1
+
 # open file, want requisition date, need date, problem, completed by
 # status, phone #, revisions, date created, and date edited
 f = open('test input for issue 1.txt','r')
@@ -34,9 +36,14 @@ for line in f:
 	# requisition_date will be the first input that we need, so we can start
 	# the table there, and then add stuff until the next requisition_date
 	
+	# need number for key of table
+	
+	print i
+	
 	# cannot use ors in the if statement block as it'll output everything
 	if 'requisition_date:' in line:
-		print line.partition(':')[2]
+		# print line.partition(':')[2]
+		req_date = line.partition(':')[2]
 	elif 'need_date:' in line:
 		print line.rpartition(':')[2]
 	elif 'problem:' in line:
@@ -53,8 +60,18 @@ for line in f:
 		print line.partition(':')[2]
 	elif 'date_edited:' in line:
 		print line.partition(':')[2]
+	elif 'from:' in line:
+		#print line.rpartition(':')[2]
+		name = line.rpartition(':')[2]
+	# such genious here, making sure that i only increments at the end of each record lollolol
+	elif 'steps' in line:
+		i = i + 1
+	
+	
+	# conn.execute("INSERT INTO VTECHZ (ID,NAME,REQDATE,NEEDDATE,PROBLEM,COMPLETEDBY,STATUS,PHONE,REVISIONS,CREATEDATE,EDITDATE) \
+	# 	VALUES (i, name, )");
 			
-		
+	# print "Records created succesfully?";
 
 conn.close()
 
